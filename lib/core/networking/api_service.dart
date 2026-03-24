@@ -10,4 +10,9 @@ final Dio dio ;
     return response.data;
 
   }
+Future<Map<String,dynamic>> post({required String endPoints,Map<String,dynamic>? query})async{
+  var response = await dio.post("$_baseUrl$endPoints",queryParameters: query);
+  return response.data;
+
+}
 }
